@@ -7,8 +7,23 @@
 |:--------------:   |:---:        |:---:        |:---:|
 |12pm - 9pm	        |12pm - 6pm   |12pm - 4pm	  |not available|
 
+## Git and Gist
+*Clone a new repo - Go to git/ gist and make a new gist/ repo. Clone into your project by clicking on copying the SSH and entering the following in CLI:\
+```
+git clone <pasteSSH> <targetFolderName>
+git branch --move master main
+git push --set-upstream origin main
+```
+
+```js
+
+git status // shows you whats new
+git add <file> // stage your file
+git commit -m "message" // commit with message. If you don't -m you'll have to do it in vim...
+git push // Upload to gist/ github
 
 
+```
 
 ## Gists and Repos
 
