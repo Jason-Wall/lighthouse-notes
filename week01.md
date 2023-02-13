@@ -8,7 +8,7 @@
 |12pm - 9pm	        |12pm - 6pm   |12pm - 4pm	  |not available|
 
 ## Git and Gist
-*Clone a new repo - Go to git/ gist and make a new gist/ repo. Clone into your project by clicking on copying the SSH and entering the following in CLI:\
+Clone a new repo - Go to git/ gist and make a new gist/ repo. Clone into your project by clicking on copying the SSH and entering the following in CLI:\
 ```
 git clone <pasteSSH> <targetFolderName>
 git branch --move master main
@@ -16,13 +16,10 @@ git push --set-upstream origin main
 ```
 
 ```js
-
 git status // shows you whats new
 git add <file> // stage your file
 git commit -m "message" // commit with message. If you don't -m you'll have to do it in vim...
 git push // Upload to gist/ github
-
-
 ```
 
 ## Gists and Repos
@@ -131,10 +128,13 @@ Best to define a path that the program will follow if it's happy and one that re
 ## Modules
 Files have to export their functions/ objects if other files are to see them. Similarly files have to import to use outside information.
 ```js
-//import to file:
+// Check what is currently exported using 
+console.log(module)
+
+// Import to file:
 const sayHelloTo = require('./myModule');// .js file extension optional
 
-//export from file:
+// Export from file:
 module.exports = sayHelloTo;
 ```
 ## Package Install for Unit Testing
@@ -161,7 +161,6 @@ describe("The function groupValidator()", () => {
    it("should return true if there are between 2 and 5 group members", () => {
     assert(validator.isGroupValid(["a", "b", "c"])).to.be.true
   });
-
 });
 ```
 [Mocha](https://mochajs.org/) and [Chai](http://chaijs.com/) documentation.\
