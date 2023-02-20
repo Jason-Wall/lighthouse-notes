@@ -54,7 +54,7 @@ You can enter arguments to applications using the Node command line. example:
 node <filename.js> arg1 arg2 [etc.]
 ```
  Refer to those arguments using ```process.argv```\
-This returns an array containing the file location, and name in index 0 and 1.\
+This returns an array containing the file location, and name in index 0 and 1 **as strings!**
 
 Use ```<array>.slice(2)``` to remove the first two elements.
 
@@ -95,7 +95,8 @@ A function stored in an object property is a method.
  Dive deeper by appending subkeys in the arguments.
 
 ## Callback Functions
-Functions that are passed as parameters to other functions. A good example is the array Filter, Map, and Reduce functions. Of course we can create our own functions too.
+Functions that are passed as parameters to other functions. A good example is the array Filter, Map, and Reduce functions. Of course we can create our own functions too.\
+The function is passed, not executed.
 
 ## [VIM](https://web.compass.lighthouselabs.ca/days/w01d4/activities/280)
 difficult to use... might as well go through it all over again.
@@ -141,11 +142,11 @@ module.exports = sayHelloTo;
 Setup packages for projects from CLI:
 1) Create a folder to work in, ```cd``` to it.
 2) ```npm init -y``` Creates a new package management system. ```-y```  chooses yes for all options.
-3) Install your packages! ```npm install mocha@9.2.2 chai --save-dev```
+3) Install your packages! ```npm i --save-dev mocha chai```
 4) Open ```package.json``` and edit ```"scripts":``` to recognize mocha
 ```js
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "mocha"
   },  
   ```
 
@@ -193,3 +194,6 @@ console.log(animals.slice(2, -1));
 [Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) - Executes a function on each element and returns transformed array of the same length.\
 
 [Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) - Reduces all the array values down to a single value according to a user callback function.
+
+### Numberic Sort:
+`<array>.sort((a, b) => { return a - b; });` negative returns get pushed further up the list.
