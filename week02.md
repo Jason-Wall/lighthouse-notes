@@ -189,13 +189,57 @@ const promise = new Promise((resolve, reject) => {
 });
 ```
 
+## Object Orientation
+Use object to simplify your data structure! Include functions, to make passing around information easier.\
+`this` - when you use `this` inside a method, `this` refers to the object that the method was called on.
 
+## Class
+A format on which future objects can be created. Might include predefined properties, methods, and `get` / `set` functions.\
+`get` runs a function on demand. `set` establishes the value of a property based on a function run at the object inception.\
+**Super and Subclass** - extend a class to reduce code repitition.
 
+```js
+class Account {
+  constructor(username) {
+    this.username = username;
+    this.balance = 0;
+  };
+};
 
+class Transaction {
+  constructor(amount, account) {
+    this.amount  = amount;
+    this.account = account;
+  };
+  commit() {
+    this.account.balance += this.value;
+  };
+};
 
+class Deposit extends Transaction {
+  get value() {
+    return this.amount
+  };
+};
 
+const myAccount = new Account('billybob');
+const t1 = new Deposit(120.00, myAccount);
+t1.commit();
+```
 
+## [Express](https://expressjs.com/)
+`npm install express --save`\
+**Boiler Plate:**
 
+```js
+const express  = require('express'); // Import the express library
+const app = express(); // Define our app as an instance of express
+const port = 3000; // Define our base URL as http:\\localhost:3000
+
+app.listen(port, function () {
+  console.log(`Server running on port ${port}`); // Tell yourself the port number to prevent mistakes in the future.
+});
+```
 
 
 
