@@ -48,12 +48,16 @@ But better to create a script in package.json:
 
   ## Git - Branching
 ```bash
-# to create a new branch :
+# See all the branches, current has a *
+git branch
+
+# create a new branch :
 git branch <newBranchTitle>
 
 # Switch to a branch:
 git checkout <branchTitle>
-#or do it all in one line!
+
+# or create and switch in one line!
 git checkout -b <branchTitle>
 
 # Merge branch into main
