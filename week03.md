@@ -68,8 +68,44 @@ git merge <branchTitle>
 git checkout <branchTitle>
 git rebase main
 git rebase <branchTitle>
+```
+## Cookies
+Setting cookies in [Express](https://expressjs.com/en/api.html#res.cookie)\
+[Cookie Parser](https://github.com/expressjs/cookie-parser) 
+``` js 
+npm install cookie-parser
+
+const express = require('express')
+const cookieParser = require('cookie-parser')
+
+const app = express()
+app.use(cookieParser())
+
+app.get('/', function (req, res) {
+  // Cookies that have not been signed
+  console.log('Cookies: ', req.cookies)
+  // Cookies that have been signed
+  console.log('Signed Cookies: ', req.signedCookies)
+})
+
+app.listen(PORT)
+```
+## HTML - Forms
+Forms have to have a method and action
+```html
+<form method = 'POST' action = '<url>'>
+  <input name = 'username'/>
+  <br/>
+  <input name = 'password'/>
+  <button type = 'submit'>Register</button>
+</form>
+```
+
+### Generate a random UID:
+```js 
+//makes a 3 char user id. Increase to 2,n for more!
+Math.random().tostring(36).substring(2,5)
 
 
 
-
-
+ 
