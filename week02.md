@@ -51,7 +51,10 @@ const {a, b, c} = const assert = require('./filename');
 Create a .gitignore file in the top directory of the project.\
 Best practice to omit the node-module from git.\
 Any file listed in ```.gitignore``` will be omitted from status, adds, or commit all.\
-Omit folders by including a forward slash - eg. ```/node_module```
+Omit folders by including a forward slash - eg. `/node_module`
+
+### Master [.gitignore](https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore) for node.
+
 
 ## ES6 Object Property Shorthand
 You can shorten the code needed to define a property by allowing the name and value of a variable to be assigned ot the object.
@@ -235,6 +238,10 @@ t1.commit();
 const express  = require('express'); // Import the express library
 const app = express(); // Define our app as an instance of express
 const port = 3000; // Define our base URL as http:\\localhost:3000
+
+app.get("/<url>", (req, res) => {
+  res.send("Hello!");
+});
 
 app.listen(port, function () {
   console.log(`Server running on port ${port}`); // Tell yourself the port number to prevent mistakes in the future.
